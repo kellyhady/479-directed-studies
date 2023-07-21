@@ -1,0 +1,36 @@
+.gallery {
+  overflow: hidden;
+  display: inline-block;
+  align-items: flex-start;
+}
+
+.inner {
+  white-space: nowrap;
+  transition: transform 0.3s;
+}
+
+.gallery-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: green;
+  height: 100vh;
+  color: #fff;
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+}
+
+.indicators > button {
+  padding: 5px;
+  margin: 5px;
+}
+
+.indicators > button.active {
+  /* background-color: green; */
+  color: red;
+  padding: 5px;
+  margin: 5px;
+}

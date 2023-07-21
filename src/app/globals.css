@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@font-face {
+  font-family: "Picaflor";
+  src: url(/fonts/Picaflor-48pt.otf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url(/fonts/helvetica.woff);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url(/fonts/helvetica-bold.woff);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Ortica";
+  src: url(/fonts/OrticaLinear-Light.woff);
+  font-weight: light;
+}
+
+@font-face {
+  font-family: "Ortica Bold";
+  src: url(/fonts/OrticaLinear-Bold.woff);
+  font-weight: bold;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+/* h1 {
+  font-family: "Picaflor";
+} */
+
+body {
+  font-family: "Ortica";
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
