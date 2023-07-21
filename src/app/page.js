@@ -12,8 +12,9 @@ function Home() {
         <h1 className="text-center text-4xl font-display">
           The Populist Archives
         </h1>
-        <h3 className="text-center text-mid font-serif uppercase mb-1">
-          <Link href="/">About</Link>
+
+        <h3 className="mt-1 mb-3 text-center text-mid font-normal">
+          CMNS479 directed studies project, in collaboration with CMNS432
         </h3>
       </nav>
       <main className="min-h-screen bg-white">
@@ -30,25 +31,35 @@ function Home() {
                 </a>
               </CarouselItem>
               <CarouselItem>
-                <Image
-                  src="/images/profile-boris.png"
-                  fill={true}
-                  style={{
-                    objectFit: "cover",
-                  }}
-                ></Image>
+                <a href="/profile-boris">
+                  <Image
+                    src="/images/profile-johnson.png"
+                    fill={true}
+                    style={{ objectFit: "cover" }}
+                  ></Image>
+                </a>
               </CarouselItem>
               <CarouselItem>
-                <Image
-                  src="/images/profile-mzd.png"
-                  fill={true}
-                  style={{ objectFit: "cover" }}
-                ></Image>
+                <a href="/profile-mzd">
+                  <Image
+                    src="/images/profile-mzd.png"
+                    fill={true}
+                    style={{ objectFit: "cover" }}
+                  ></Image>
+                </a>
               </CarouselItem>
             </Carousel>
           </div>
         </div>
       </main>
+      <footer>
+        <h3 className="uppercase text-center text-sm font-serif">
+          Developed by Kelly Hady
+        </h3>
+        <h3 className="uppercase text-center text-sm font-serif mb-3">
+          Under the supervision of Dr. Daniel Ahadi
+        </h3>
+      </footer>
     </>
   );
 }

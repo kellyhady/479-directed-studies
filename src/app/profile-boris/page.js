@@ -1,10 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import ScrollToTop from "/components/scrollTopButton.jsx";
 import Gallery, { GalleryItem } from "/components/gallery.jsx";
 
-const ProfileTitle = ({ children }) => (
-  <span className="text-mid md:col-start-2 font-serif font-bold">
+const ProfileTitle = ({ children, id }) => (
+  <span className="text-mid md:col-start-2 font-serif font-bold" id={id}>
     <h2 className="m-2">{children}</h2>
   </span>
 );
@@ -20,38 +21,90 @@ const ProfileCaption = ({ children }) => (
   </span>
 );
 
-// const Crumbs = ({ children }) => (
-//   <span className="text-mid md:col-start-1 font-serif font-bold">
-//     <a href="" className="m-2">
-//       {children}
-//     </a>
-//   </span>
-// );
-
-// const Gallery = ({ children }) => (
-//   <div className="gallery-wrap md:col-start-3"></div>
-// );
-
-function ProfileAhmadinejad() {
+const BlogAuthor = ({ children }) => (
+  <span className="text-sm md:col-start-1 font-serif uppercase">
+    <h2 className="m-2 mt-7">{children}</h2>
+  </span>
+);
+function ProfileBoris() {
   return (
     <>
+      <ScrollToTop />
       <nav className="border-b-1 border-b-black">
         <h1 className="text-center text-4xl font-display">Boris Johnson</h1>
+        <h3 className="uppercase text-center text-sm font-serif">
+          Former Prime Minister of the United Kingdom
+        </h3>
 
-        <h3 className="text-center text-sm font-serif">
+        <h3 className="mt-5 mb-5 text-center text-mid">
           <Link href="/">Back Home</Link>
         </h3>
       </nav>
       <main className="grid md:grid-cols-4 min-h-screen px-4 md:divide-x-1 divide-black">
         <section className="md:col-span-3 grid md:grid-cols-3">
-          <ProfileCaption>
-            Former Prime Minister of the United Kingdom
-          </ProfileCaption>
-
-          <ProfileCaption>Blog Content by Keita</ProfileCaption>
+          <div>
+            <ProfileCaption>
+              <a href="#background" className="hover:text-blue-500">
+                Background
+              </a>
+            </ProfileCaption>
+            <ProfileCaption>
+              <a href="#pol-env" className="hover:text-blue-500 ">
+                Political Environment
+              </a>
+            </ProfileCaption>
+            <ProfileCaption>
+              <a href="#opposition" className="hover:text-blue-500">
+                Opposition
+              </a>
+            </ProfileCaption>
+            <ProfileCaption>
+              <a href="#archetype" className="hover:text-blue-500">
+                Archetype
+              </a>
+            </ProfileCaption>
+            <ProfileCaption>
+              <a href="#rise-in-power" className="hover:text-blue-500">
+                Rise in Power
+              </a>
+            </ProfileCaption>
+            <ProfileCaption>
+              <a href="#implement-power" className="hover:text-blue-500">
+                Implement Power
+              </a>
+            </ProfileCaption>
+            <ProfileCaption>
+              <a href="#target-aud" className="hover:text-blue-500">
+                Target Audience
+              </a>
+            </ProfileCaption>
+            <ProfileCaption>
+              <a href="#popular-themes" className="hover:text-blue-500">
+                Popular Themes
+              </a>
+            </ProfileCaption>
+            <ProfileCaption>
+              <a href="#appeal-aud" className="hover:text-blue-500">
+                Appeal to Audience
+              </a>
+            </ProfileCaption>
+            <ProfileCaption>
+              <a href="#impact" className="hover:text-blue-500">
+                Impact
+              </a>
+            </ProfileCaption>
+            <ProfileCaption>
+              <a href="#controversy" className="hover:text-blue-500">
+                Controversy
+              </a>
+            </ProfileCaption>
+            <BlogAuthor>Author: Keita</BlogAuthor>
+          </div>
+          {/* 
+          <ProfileCaption>Blog Content by Keita</ProfileCaption> */}
 
           {/* <ProfileCaption className="items-start">2005-2013</ProfileCaption> */}
-          <ProfileTitle>Background</ProfileTitle>
+          <ProfileTitle id="background">Background</ProfileTitle>
           <ProfileParagraph className="items-start">
             Alexander Boris de Pfeffel Johnson (Boris Johnson) was born on June
             19, 1964. He is a British politician and is best known for being the
@@ -61,7 +114,7 @@ function ProfileAhmadinejad() {
             later on during college, he denounced his Catholic faith and became
             an Anglican, joining the Church of England.
           </ProfileParagraph>
-          <ProfileTitle id="political-environment">
+          <ProfileTitle id="pol-env">
             <span className="block -mb-1">Political Environment</span>
             <span className="uppercase block font-bold">During His Reign</span>
           </ProfileTitle>
@@ -90,7 +143,7 @@ function ProfileAhmadinejad() {
             from all political positions and duties.
           </ProfileParagraph>
 
-          <ProfileTitle>Opposition</ProfileTitle>
+          <ProfileTitle id="opposition">Opposition</ProfileTitle>
           <ProfileParagraph>
             <ul>
               <li className="mb-1">
@@ -121,8 +174,10 @@ function ProfileAhmadinejad() {
             </ul>
           </ProfileParagraph>
 
-          <ProfileTitle>
-            <span className="block -mb-1 mt-1">Arcetype</span>
+          <ProfileTitle id="archetype">
+            <span className="block -mb-1 mt-1" id="archetype">
+              Archetype
+            </span>
             {/* <span className="uppercase block font-bold">NATIONAL DEFENDER</span> */}
           </ProfileTitle>
           <ProfileParagraph>
@@ -141,7 +196,7 @@ function ProfileAhmadinejad() {
               to safeguarding Iran's interests.
             </span>
           </ProfileParagraph>
-          <ProfileTitle>Rise in Power</ProfileTitle>
+          <ProfileTitle id="rise-in-power">Rise in Power</ProfileTitle>
           <ProfileParagraph>
             Boris Johnson is often praised for his charisma and ability to
             persuade the public, that being said, there are several factors that
@@ -156,7 +211,9 @@ function ProfileAhmadinejad() {
             COVID-19 lockdowns and through his leadership, he established
             himself as a populist leader.
           </ProfileParagraph>
-          <ProfileTitle className="mt-1">Implementing his Power</ProfileTitle>
+          <ProfileTitle className="mt-1" id="implement-power">
+            Implementing his Power
+          </ProfileTitle>
           <ProfileParagraph>
             During his time as Prime Minister of the United Kingdom, Boris
             Johnson held various positions on different issues throughout his
@@ -182,7 +239,7 @@ function ProfileAhmadinejad() {
             supported initiatives such as expanding academies and free schools,
             which have more independence from local authorities.
           </ProfileParagraph>
-          <ProfileTitle>Target Audience</ProfileTitle>
+          <ProfileTitle id="target-aud">Target Audience</ProfileTitle>
           <ProfileParagraph>
             Conservatives are among Boris Johnson's target demographic,
             particularly those who find him approachable and relatable.
@@ -195,7 +252,9 @@ function ProfileAhmadinejad() {
             determination with Brexit appeals to people who value independence,
             and control over immigration and trade policy.
           </ProfileParagraph>
-          <ProfileTitle>Popular Themes in Campaign</ProfileTitle>
+          <ProfileTitle id="popular-themes">
+            Popular Themes in Campaign
+          </ProfileTitle>
           <ProfileParagraph>
             "Get Brexit Done" was Johnson's key campaign message during the 2019
             general election. It resonated with many who were frustrated with
@@ -221,7 +280,7 @@ function ProfileAhmadinejad() {
             of transport. The term "Boris Bikes" became widely used to refer to
             the scheme, which remains popular in the city.
           </ProfileParagraph>
-          <ProfileTitle>Appeal to the Audience</ProfileTitle>
+          <ProfileTitle id="appeal-aud">Appeal to the Audience</ProfileTitle>
           <ProfileParagraph>
             Boris Johnson is well known for his engaging and enthusiastic media
             presence. To connect with his audience, he frequently employs humor
@@ -238,7 +297,7 @@ function ProfileAhmadinejad() {
             what the Brexit movement may have had to offer the people of
             Britain.
           </ProfileParagraph>
-          <ProfileTitle>Lasting Impact</ProfileTitle>
+          <ProfileTitle id="impact">Lasting Impact</ProfileTitle>
           <ProfileParagraph>
             Boris Johnson had a significant influence on Britain by guiding the
             country through the Brexit process. Brexit is unlikely to have
@@ -253,7 +312,7 @@ function ProfileAhmadinejad() {
             long time since various individuals have different perspectives on
             them.
           </ProfileParagraph>
-          <ProfileTitle>Controversy</ProfileTitle>
+          <ProfileTitle id="controversy">Controversy</ProfileTitle>
           <ProfileParagraph>
             In the Party Gate Scandal, It was found that Boris Johnson's
             government officials and advisors had social parties and gatherings
@@ -296,12 +355,26 @@ function ProfileAhmadinejad() {
 
         <Gallery>
           <GalleryItem>
-            <div>Mahmoud Ahmadinejad</div>
+            <img src="/images/poster-johnson.png" />
+          </GalleryItem>
+          <GalleryItem>
+            <img src="/images/gallery-johnson-1.png" />
+          </GalleryItem>
+          <GalleryItem>
+            <img src="/images/gallery-johnson-2.png" />
           </GalleryItem>
         </Gallery>
       </main>
+      <footer className="border-t-1 border-t-black py-3">
+        <h3 className="uppercase text-center text-sm font-serif">
+          Developed by Kelly Hady
+        </h3>
+        <h3 className="uppercase text-center text-sm font-serif mb-3">
+          Under the supervision of Dr. Daniel Ahadi
+        </h3>
+      </footer>
     </>
   );
 }
 
-export default ProfileAhmadinejad;
+export default ProfileBoris;

@@ -1,10 +1,15 @@
 "use client";
-
+import Image from "next/image";
 import Link from "next/link";
+import { animateScroll as scroll } from "react-scroll";
+import ScrollToTop from "/components/scrollTopButton.jsx";
 import Gallery, { GalleryItem } from "/components/gallery.jsx";
 
 const ProfileTitle = ({ children, id }) => (
-  <span className="text-mid md:col-start-2 font-serif font-bold" id={id}>
+  <span
+    className="text-mid md:col-start-2 font-serif font-bold scroll-smooth"
+    id={id}
+  >
     <h2 className="m-2">{children}</h2>
   </span>
 );
@@ -20,27 +25,103 @@ const ProfileCaption = ({ children }) => (
   </span>
 );
 
+const BlogAuthor = ({ children }) => (
+  <span className="text-sm md:col-start-1 font-serif uppercase">
+    <h2 className="m-2 mt-7">{children}</h2>
+  </span>
+);
+
 function ProfileAhmadinejad() {
   return (
     <>
+      <ScrollToTop />
       <nav className="border-b-1 border-b-black">
         <h1 className="text-center text-4xl font-display">
           Mahmoud Ahmadinejad
         </h1>
-
-        <h3 className="text-center text-sm font-serif">
-          <Link href="/">Back Home</Link>
+        <h3 className="uppercase text-center text-sm font-serif">
+          Sixth President of Iran
+        </h3>
+        <h3 className="mt-3 mb-3 text-center text-mid font-normal">
+          <Link href="/">Back to Profiles</Link>
         </h3>
       </nav>
       <main className="grid md:grid-cols-4 min-h-screen px-4 md:divide-x-1 divide-black">
         <section className="md:col-span-3 grid md:grid-cols-3">
-          <ProfileCaption>Sixth President of Iran</ProfileCaption>
-          <ProfileCaption>
-            <a href="#opposition">Opposition</a>
-          </ProfileCaption>
+          <div>
+            <ProfileCaption>
+              <a
+                href="#religious-bg"
+                className="hover:text-blue-500 smooth-scroll"
+              >
+                Background
+              </a>
+            </ProfileCaption>
+            <ProfileCaption>
+              <a href="#pol-env" className="hover:text-blue-500">
+                Political Environment
+              </a>
+            </ProfileCaption>
+            <ProfileCaption>
+              <a
+                href="#opposition"
+                className="hover:text-blue-500 smooth-scroll"
+              >
+                Opposition
+              </a>
+            </ProfileCaption>
+            <ProfileCaption>
+              <a href="#archetype" className="hover:text-blue-500">
+                Archetype
+              </a>
+            </ProfileCaption>
+            <ProfileCaption>
+              <a href="#rise-in-power" className="hover:text-blue-500">
+                Rise in Power
+              </a>
+            </ProfileCaption>
+            <ProfileCaption>
+              <a href="#implement-power" className="hover:text-blue-500">
+                Implement Power
+              </a>
+            </ProfileCaption>
+            <ProfileCaption>
+              <a href="#target-aud" className="hover:text-blue-500">
+                Target Audience
+              </a>
+            </ProfileCaption>
+            <ProfileCaption>
+              <a href="#popular-themes" className="hover:text-blue-500">
+                Popular Themes
+              </a>
+            </ProfileCaption>
+            <ProfileCaption>
+              <a href="#appeal-aud" className="hover:text-blue-500">
+                Appeal to Audience
+              </a>
+            </ProfileCaption>
+            <ProfileCaption>
+              <a href="#impact" className="hover:text-blue-500">
+                Impact
+              </a>
+            </ProfileCaption>
+            <ProfileCaption>
+              <a
+                href="#controversy"
+                className="hover:text-blue-500"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Controversy
+              </a>
+            </ProfileCaption>
+            <BlogAuthor>Author: Kelly & Jessica</BlogAuthor>
+          </div>
 
           {/* <ProfileCaption className="items-start">2005-2013</ProfileCaption> */}
-          <ProfileTitle>Religious Background</ProfileTitle>
+          <ProfileTitle id="religious-bg">Religious Background</ProfileTitle>
           <ProfileParagraph className="items-start">
             Ahmadinejad is a devout Muslim. He has emphasized his commitment to
             Islamic values and principles throughout his political career.
@@ -48,7 +129,7 @@ function ProfileAhmadinejad() {
             master's degree and a Ph.D. in transportation engineering from the
             same university.
           </ProfileParagraph>
-          <ProfileTitle>
+          <ProfileTitle id="pol-envt">
             <span className="block -mb-1">Political Environment</span>
             <span className="uppercase block font-bold">During His Reign</span>
           </ProfileTitle>
@@ -66,6 +147,7 @@ function ProfileAhmadinejad() {
             economy and led to high inflation and unemployment which declined
             the value of Iranian Rial (National Currency).
           </ProfileParagraph>
+
           <ProfileTitle id="opposition">Opposition</ProfileTitle>
           <ProfileParagraph>
             The Green Movement emerged due to the dispute of presidential
@@ -79,8 +161,8 @@ function ProfileAhmadinejad() {
             Green Movement criticized that this impacted on inflation throughout
             the country.
           </ProfileParagraph>
-          <ProfileTitle>
-            <span className="block -mb-1 mt-1">Arcetype</span>
+          <ProfileTitle id="archetype">
+            <span className="block -mb-1 mt-1">Archetype</span>
             <span className="uppercase block font-bold">NATIONAL DEFENDER</span>
           </ProfileTitle>
           <ProfileParagraph>
@@ -103,7 +185,9 @@ function ProfileAhmadinejad() {
               to safeguarding Iran's interests.
             </span>
           </ProfileParagraph>
-          <ProfileTitle id="rise-in-power">Rise in Power</ProfileTitle>
+          <ProfileTitle id="rise-in-power" className="scroll-smooth">
+            Rise in Power
+          </ProfileTitle>
           <ProfileParagraph>
             Ahmadinejad’s rise in power was led by his involvement in the 1979
             Iranian Revolution and subsequent positions in the government, i.e
@@ -112,7 +196,10 @@ function ProfileAhmadinejad() {
             Ahmadinejad also garnered support from conservative factions within
             Iran, which secured him the presidency in 2005.
           </ProfileParagraph>
-          <ProfileTitle className="mt-1">Implementing his Power</ProfileTitle>
+
+          <ProfileTitle id="implement-power" className="mt-1">
+            Implementing Power
+          </ProfileTitle>
           <ProfileParagraph>
             As president, Ahmadinejad challenged political elites and advocated
             for a more inclusive and participatory government. However, his
@@ -122,7 +209,8 @@ function ProfileAhmadinejad() {
             the religious establishment, who saw him as a defender of Islamic
             values and principles.
           </ProfileParagraph>
-          <ProfileTitle>Target Audience</ProfileTitle>
+
+          <ProfileTitle id="target-aud">Target Audience</ProfileTitle>
           <ProfileParagraph>
             <span className="block">
               <ul>
@@ -132,7 +220,9 @@ function ProfileAhmadinejad() {
               </ul>
             </span>
           </ProfileParagraph>
-          <ProfileTitle>Popular Themes in Campaign</ProfileTitle>
+          <ProfileTitle id="popular-themes">
+            Popular Themes in Campaign
+          </ProfileTitle>
           <ProfileParagraph>
             His campaign had promises of equal wealth distribution, a better
             economy, and anti-Western sentiments. Moreover, he spoke through
@@ -141,7 +231,8 @@ function ProfileAhmadinejad() {
             networks of volunteers that helped spread his message and gain
             momentum, thereby mobilizing grassroots support.
           </ProfileParagraph>
-          <ProfileTitle>Appeal to the Audience</ProfileTitle>
+
+          <ProfileTitle id="appeal-aud">Appeal to the Audience</ProfileTitle>
           <ProfileParagraph>
             He appeals to the target audience by fabricating stories about his
             opponents rigging the election, to encourage the people to ‘vote for
@@ -149,7 +240,7 @@ function ProfileAhmadinejad() {
             improve living standards of ordinary Iranians. He held a strong
             stance against corruption and vowed to equally distribute wealth. 
           </ProfileParagraph>
-          <ProfileTitle>Lasting Impact</ProfileTitle>
+          <ProfileTitle id="impact">Lasting Impact</ProfileTitle>
           <ProfileParagraph>
             Ahmadinejad’s presidency highlighted the grievances of working class
             and lower-income Iranians and implemented social welfare programs.
@@ -159,7 +250,7 @@ function ProfileAhmadinejad() {
             influence on Iran’s international relations. His presidency led to a
             much conservative influence in subsequent elections in Iran. 
           </ProfileParagraph>
-          <ProfileTitle>Controversy</ProfileTitle>
+          <ProfileTitle id="controversy">Controversy</ProfileTitle>
           <ProfileParagraph>
             His denial of the Holocaust drew significant international
             condemnation and he repeatedly questioned the historical reality of
@@ -175,8 +266,20 @@ function ProfileAhmadinejad() {
 
         <Gallery>
           <GalleryItem>
-            <div>Mahmoud Ahmadinejad</div>
+            <img
+              src="../images/poster-ahmadinejad.png"
+              alt="A poster of Mahmoud Ahmadinejad"
+            />
           </GalleryItem>
+          <GalleryItem>
+            <img src="../images/gallery-ahmadinejad-1.png"></img>
+          </GalleryItem>
+          {/* <GalleryItem>
+            <img
+              src="https://media.cnn.com/api/v1/images/stellar/prod/121003011517-iran-ahmadinejad-sanctions.jpg?q=w_3249,h_2084,x_0,y_0,c_fill"
+              className="object-fit"
+            />
+          </GalleryItem> */}
         </Gallery>
       </main>
     </>

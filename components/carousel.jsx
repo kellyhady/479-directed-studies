@@ -27,19 +27,49 @@ export const Carousel = ({ children }) => {
     setActiveIndex(newIndex);
   };
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     if (!paused) {
-  //       updateIndex(activeIndex + 1);
-  //     }
-  //   }, 1500);
+  // const changeChild = (e) => {
+  //   if (e.key === "ArrowLeft") {
+  //     newIndex = 0;
+  //   } else if (e.key === "ArrowRight") {
+  //     newIndex = 0;
+  //     // newIndex = Children.count(children) - 1;
+  //   }
+  //   setActiveIndex(newIndex);
+  // };
 
-  //   return () => {
-  //     if (interval) {
-  //       clearInterval(interval);
+  // Keypress event handler
+  // const changeChild = useCallback(
+  //   (e) => {
+  //     if (e.key === "ArrowLeft") {
+  //       // If supposed previous child is < 0 set it to last child
+  //       setActiveChild((a) => (a - 1 < 0 ? children.length - 1 : a - 1));
+  //     } else if (e.key === "ArrowRight") {
+  //       // If supposed next child is > length -1 set it to first child
+  //       setActiveChild((a) => (a + 1 > children.length - 1 ? 0 : a + 1));
   //     }
-  //   };
-  // });
+  //   },
+  //   [children]
+  // );
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (!paused) {
+        updateIndex(activeIndex + 1);
+      }
+    }, 1500);
+
+    return () => {
+      if (interval) {
+        clearInterval(interval);
+      }
+    };
+
+    document.addEventListener("keydown", changeChild);
+
+    return function cleanup() {
+      document.removeEventListener("keydown", changeChild);
+    };
+  });
 
   const handlers = useSwipeable({
     onSwipedLeft: () => updateIndex(activeIndex + 1),
@@ -60,11 +90,11 @@ export const Carousel = ({ children }) => {
       <div
         className="inner" /*inner css class*/
         style={{
-          transform: `translateX(-${activeIndex * 100}%)`,
+          transform: `translateX(-${(activeIndex * 100) / 3}%)`,
         }}
       >
         {Children.map(children, (child, index) => {
-          return cloneElement(child, { width: "100%" });
+          return cloneElement(child, { width: "100vw" });
         })}
       </div>
 

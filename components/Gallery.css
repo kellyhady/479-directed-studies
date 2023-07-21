@@ -1,21 +1,23 @@
 .gallery {
   overflow: hidden;
-  display: inline-block;
-  align-items: flex-start;
+  /* height: 100%; */
 }
 
 .inner {
+  /* display: flex; */
   white-space: nowrap;
   transition: transform 0.3s;
 }
 
 .gallery-item {
   display: inline-flex;
+  justify-items: start;
   align-items: center;
   justify-content: center;
-  background-color: green;
-  height: 100vh;
+  /* height: 100vh; */
+  height: fit-content !important;
   color: #fff;
+  position: relative;
 }
 
 .indicators {
