@@ -82,10 +82,18 @@ function ProfileRahman() {
                 Controversy
               </a>
             </ProfileCaption>
-            <BlogAuthor>Author: Mohammed & Team</BlogAuthor>
+            <BlogAuthor>Author: Sangwoong, Sophie, and Bulla</BlogAuthor>
           </div>
           {/* Main copy start */}
           <ProfileTitle id="background">Background</ProfileTitle>
+          <ProfileParagraph>
+            Sheikh Mujibur Rahman, the founder of Bangladesh, was pivotal in the
+            nation's liberation from Pakistan. His steadfast pursuit of justice,
+            powerful support for Bengali rights, and influential leadership
+            solidified his revered status. His commitment to a democratic,
+            secular, and prosperous Bangladesh still informs the nation's
+            socio-political direction.
+          </ProfileParagraph>
           <ProfileList>
             <ul>
               <li>Raised by a rich peasant farmer</li>

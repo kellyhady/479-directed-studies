@@ -48,6 +48,15 @@ function Home() {
                   ></Image>
                 </a>
               </CarouselItem>
+              <CarouselItem>
+                <a href="/profile-rahman">
+                  <Image
+                    src="/images/profile-mzd.png"
+                    fill={true}
+                    style={{ objectFit: "cover" }}
+                  ></Image>
+                </a>
+              </CarouselItem>
             </Carousel>
           </div>
         </div>

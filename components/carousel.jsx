@@ -90,7 +90,7 @@ export const Carousel = ({ children }) => {
       <div
         className="inner" /*inner css class*/
         style={{
-          transform: `translateX(-${(activeIndex * 100) / 3}%)`,
+          transform: `translateX(-${(activeIndex * 100) / 4}%)`,
         }}
       >
         {Children.map(children, (child, index) => {
