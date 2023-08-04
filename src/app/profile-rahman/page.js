@@ -62,18 +62,18 @@ function ProfileRahman() {
               </a>
             </ProfileCaption>
             <ProfileCaption>
+              <a href="#philosophy" className="hover:text-blue-500">
+                Political Philosophy
+              </a>
+            </ProfileCaption>
+            <ProfileCaption>
+              <a href="#achievements" className="hover:text-blue-500">
+                Key Achievements
+              </a>
+            </ProfileCaption>
+            <ProfileCaption>
               <a href="#legacy" className="hover:text-blue-500">
                 Legacy
-              </a>
-            </ProfileCaption>
-            <ProfileCaption>
-              <a href="#rise-to-power" className="hover:text-blue-500">
-                Rise to Power
-              </a>
-            </ProfileCaption>
-            <ProfileCaption>
-              <a href="#agenda" className="hover:text-blue-500">
-                Agenda
               </a>
             </ProfileCaption>
 
@@ -94,112 +94,122 @@ function ProfileRahman() {
             secular, and prosperous Bangladesh still informs the nation's
             socio-political direction.
           </ProfileParagraph>
-          <ProfileList>
-            <ul>
-              <li>Raised by a rich peasant farmer</li>
-              <li>
-                Enjoyed classical chinese novels over texts that preached
-                confucian morals
-              </li>
-              <li>
-                Critiqued and refused to accept his own arranged marriage Left
-                home at 16 to complete his elementary school training
-              </li>
-            </ul>
-          </ProfileList>
 
-          <ProfileTitle id="legacy">Legacy</ProfileTitle>
+          <ProfileTitle id="philosophy">Political Philosophy</ProfileTitle>
           <ProfileList>
-            <ul>
+            <ul className="list-disc">
               <li>
-                Contributions: Mao united China, promoted industrialization, and
-                made advancements in education and healthcare.
+                Advocate for democracy, nationalism, socialism, and secularism
+                Guided by "equality for all" principle
               </li>
-              <li>
-                Historical Significance: Mao's legacy continues to shape China's
-                identity and its path as a global power.
-              </li>
-              <li>
-                Status of Women Education: His ideology has helped China to
-                become a global power
-              </li>
+              <li>Guided by "equality for all" principle</li>
             </ul>
           </ProfileList>
-          <ProfileTitle id="rise-to-power">Rise to Power</ProfileTitle>
+          <ProfileTitle id="achievements">Key Achievements</ProfileTitle>
           <ProfileList>
-            <ul>
+            <ul className="list-disc">
               <li>
-                Had a post at the Beijing University Library in 1918 where he
-                met two fellow founders of the Chinese communist party. At this
-                time described himself as "a Marxist in theory and to some
-                extent in action," Founded Communist party of China in 1921 and
-                joined the communist party in 1922.
+                Created the Six-Point Movement for greater autonomy for East
+                Pakistan
               </li>
+              <li>Led the Awami League to win in the 1970 general elections</li>
 
+              <li>Declared Bangladesh's independence in 1971</li>
               <li>
-                The Long March: In 1934, Mao led the Red Army on a grueling
-                retreat, covering over 6,000 miles, which solidified his
-                leadership within the Communist Party
-              </li>
-              <li>
-                Assumed Role of Party Chariman in 1945 Helped establish People's
-                Republic of China in 1949
+                Served as Bangladesh's first Prime Minister post-independence
               </li>
             </ul>
           </ProfileList>
-          <ProfileTitle id="agenda">Agenda</ProfileTitle>
+          <ProfileTitle id="legacy">Impact and Legacy</ProfileTitle>
           <ProfileList>
-            <ul>
-              <li className="pb-2">
-                <h3 className="uppercase font-bold">Social Agenda</h3>
-                Mao implemented land reforms and collectivization, aiming for a
-                classless society and equitable distribution of resources
-              </li>
-              <li className="pb-2">
-                <h3 className="uppercase font-bold">Political Agenda</h3>
-                He established a one-party rule and centralized power. He
-                initiated the Cultural Revolution, aiming to eradicate
-                "counter-revolutionary" elements and promote his ideology.
-              </li>
-              <li className="pb-2">
-                <h3 className="uppercase font-bold">Cultural Agenda</h3>
-                Mao promoted revolutionary culture, fostering loyalty through
-                the Red Guards and the distribution of the Little Red Book.
+            <ul className="list-disc">
+              <li>Revered as "Bangabandhu", "Friend of Bengal"</li>
+              <li>Considered the founding father of Bangladesh</li>
+              <li>
+                His vision for a democratic, inclusive, andequitable nation left
+                a lasting imprint onBangladesh
               </li>
             </ul>
           </ProfileList>
           <ProfileTitle id="controversy">Controversy</ProfileTitle>
+          <ProfileList>
+            <ul className="list-disc">
+              <li>
+                Faced criticism for handling of the 1972 famine and allegations
+                of autocratic rule
+              </li>
+              <li>Economic challenges during his leadership</li>
+            </ul>
+          </ProfileList>
+
+          <ProfileTitle id="timeline">Timeline</ProfileTitle>
           <ProfileParagraph>
-            His denial of the Holocaust drew significant international
-            condemnation and he repeatedly questioned the historical reality of
-            the event, which caused outrage and sparked accusations of
-            anti-Semitism. He was also boldly anti-Israel, and made comments
-            that called for the destruction of Israel. It was also highly
-            controversial how his second term in presidency responded to the
-            Green Movement protests by use of force, arrests, and censorship.
+            <div className="pb-5">
+              <h1 className="text-mid font-bold text-red-500">1920</h1>
+              <h1 className="text-sm">Born in Tungipara , on March 17.</h1>
+            </div>
+            <div className="pb-5">
+              <h1 className="text-mid font-bold text-red-500">1940</h1>
+              <h1 className="text-sm">
+                Begins involvement in politics, joining the AllIndia Muslim
+                Students Federation andstudied law at the University of
+                Calcutta.
+              </h1>
+            </div>
+            <div className="pb-5">
+              <h1 className="text-mid font-bold text-red-500">1946-47</h1>
+              <h1 className="text-sm">
+                Joins the Awami Muslim League , steppinginto the political
+                sphere.
+              </h1>
+            </div>
+            <div className="pb-5">
+              <h1 className="text-mid font-bold text-red-500">1949-51</h1>
+              <h1 className="text-sm">
+                Demonstrations, when the governmentannounced that Urdu was the
+                officiallanguage of Pakistan , and "Bangla act"
+              </h1>
+            </div>
+            <div className="pb-5">
+              <h1 className="text-mid font-bold text-red-500">1956-58</h1>
+              <h1 className="text-sm">
+                Serves as Minister of Commerce andIndustries , contributing to
+                Pakistan'spolitical landscape.
+              </h1>
+            </div>
+            <div className="pb-5">
+              <h1 className="text-mid font-bold text-red-500">1966</h1>
+              <h3 className="text-sm">
+                Unveils the Six-Point Movement ,advocating for East Pakistan's
+                autonomy.
+              </h3>
+            </div>
+            <div className="pb-5">
+              <h1 className="text-mid font-bold text-red-500">1970</h1>
+              <h1 className="text-sm">
+                Leads the Awami League to win thegeneral elections, amplifying
+                the call forindependence
+              </h1>
+            </div>
           </ProfileParagraph>
-          {/* Main section end */}
         </section>
+
+        {/* Main section end */}
 
         <Gallery>
           <GalleryItem>
             <img
-              src="../images/poster-mzd.png"
+              src="../images/poster-rahman.png"
               alt="A poster of Mahmoud Ahmadinejad"
             />
           </GalleryItem>
           <GalleryItem>
-            <img src="../images/gallery-mzd-1.png"></img>
-          </GalleryItem>
-          <GalleryItem>
-            <img src="../images/gallery-mzd-2.png"></img>
-          </GalleryItem>
-          {/* <GalleryItem>
             <img
-              src="https://media.cnn.com/api/v1/images/stellar/prod/121003011517-iran-ahmadinejad-sanctions.jpg?q=w_3249,h_2084,x_0,y_0,c_fill"
-              className="object-fit"
-            />
-          </GalleryItem> */}
+              src="../images/gallery-rahman-1.jpeg"
+              width="400px"
+              height="400px"
+            ></img>
+          </GalleryItem>
         </Gallery>
       </main>
       <footer className="border-t-1 border-t-black py-3">
